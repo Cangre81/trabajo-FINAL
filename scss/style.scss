@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import "./variables/variables";
+@import "./sass2/extend";
+@import "./sass2/maps";
+@import "./sass2/mixins";
+@import "./partials/index";
+@import "./partials/inicio";
+@import "./partials/mi-perfil";
+@import "./partials/mensajes";
+@import "./partials/en-linea";
+@import "./partials/ayuda";
+

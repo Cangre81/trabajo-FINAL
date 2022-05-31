@@ -1,0 +1,110 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/maps";
+@import "../sass2/mixins";
+
+
+header{
+    @include header-all (15px, 10px)
+}
+
+.main-miperfil{
+    display: flex;
+    align-items: center;
+
+
+
+    
+    .menu-nav{
+            @include menu-all (150px, 590px)
+        }
+    
+    .section-miperfil{
+        display: flex;
+
+        .miperfil-foto{
+            width: 300px;
+            margin-top: 50px;
+
+            .imagen-miperfil{
+                width: 100px;
+            }
+            
+            
+            .h4-user{
+                color: gray;
+            }
+        }
+        
+        .div-miperfil{
+            background-color: $ColorBack;
+            width: 350px;
+
+            .data-alumno{
+                margin-top: 20px;
+                list-style:none;
+            
+            }
+            .data-padres{
+                margin-top: 30px;
+                list-style:none;
+            }
+        }
+    }
+    .caja-derecha{
+        @include caja-centrada;
+    }
+}
+
+footer{
+    @include footer-memo
+}
+
+
+@media screen and (max-width: 414px) {
+
+    header{
+        @include header-movil-flex
+            }
+    
+    
+    .main-miperfil{
+        flex-direction: column;
+        height: auto;
+
+        
+        .menu{
+            width: 100%;
+            &-nav{
+                display: flex;
+                height: auto;
+                width: 100% ;
+                margin: 0;
+                margin-top: 10px;
+                justify-content: space-between;
+    
+                .menu-txt{
+                    display: none;
+                }
+                
+            }
+            
+        }
+        .caja-derecha{
+            .section-miperfil{
+                flex-direction: column;
+                .miperfil-foto{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+    footer{
+        margin-top: 10px;
+    }
+    
+}

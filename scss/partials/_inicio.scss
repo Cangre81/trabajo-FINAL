@@ -1,0 +1,139 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/maps";
+@import "../sass2/mixins";
+
+.inicio-container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100vh 100px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header"
+      "nav body body body"
+      "nav body body body"
+      "nav body body body"
+      "footer footer footer footer";
+
+    .inicio-header { grid-area: header; }
+  
+    .inicio-nav { grid-area: nav; }
+      
+    .inicio-body { grid-area: body; }
+      
+    .inicio-footer { grid-area: footer; }
+
+    .inicio-header{
+        @include header-all (550px, 300px)
+    }
+
+    .menu-nav{
+        @include menu-all (150px, 670px)
+    }
+    .inicio-body{
+        .section-inicio{
+            display: flex;
+            flex-grow: 4;
+
+            .horarios{
+                background-color: $ColorBack;
+                width: 500px;
+                margin-top: 2px;
+            }
+
+            .inicio-derecha{
+                margin-left: 20px;
+                width: 200px;
+
+                .notificaciones{
+                    background-color: $ColorBack;
+                    margin-bottom: 30px;
+                    margin-top: 2px;
+                    height: 330px;
+        
+                    .notif-pendientes{
+                        font-style: italic; 
+                        color: red;
+                        margin-top: 10px;
+                        animation: flash 5000ms ease-in-out;
+                        animation-iteration-count: infinite;
+                        @keyframes flash {
+                            0%, 50%, 100% {
+                               opacity: 1;
+                            }
+                            25%, 75% {
+                               opacity: 0;
+                            }
+                         }                
+                    }
+                }
+
+                .mis-docentes{
+                    background-color: $ColorBack;
+                    height: 320px;
+                    font-size: small;
+                }
+            }
+
+            
+
+        }
+
+
+    }
+    .inicio-footer{
+        @include footer-memo ()
+    }
+  }
+
+
+  @media screen and (max-width: 414px) {
+    .inicio-container{
+        display: flex;
+        flex-direction: column;
+
+        .inicio-header{
+            @include header-movil
+        }
+
+        .menu{
+          &-nav{
+              display: flex;
+              height: auto;
+              width: 100% ;
+              margin: 0;
+              margin-top: 10px;
+              justify-content: space-between;
+  
+              .menu-txt{
+                  display: none;
+              }
+              
+          }
+          
+      }
+
+        .inicio-body{
+          .section-inicio{
+              flex-direction: column-reverse;
+              .horarios{
+                  width: 100%;
+              }
+              .inicio-derecha{
+                  width: 100%;
+                  margin-left: 0;
+                  .notificaciones{
+                      height: auto;
+                      padding: 10px;
+                  }
+              }
+          }
+        }
+        
+        
+  }
+  
+  
+}
+

@@ -1,0 +1,96 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/maps";
+@import "../sass2/mixins";
+
+header{
+    @include header-all (0, 0)
+}
+
+.main-mensajes{
+    display: flex;
+    align-items: center;
+
+    .menu-nav-mensajes{
+        @include menu-all (150px, 590px)
+    }
+
+    .section-mensajes{
+        background-color: $ColorBack;
+        width: 700px;
+
+        .mail{
+            text-align: center;
+        }
+
+        .p-mensajes{
+            background-color: $ColorBack;
+            width: 700px;
+            height: 20px;
+         
+        }
+        
+        .mail{
+            background-color: $ColorBack;
+            width: 700px;
+            height: 400px;
+            margin-top: 20px;
+        }
+     
+    }
+    .caja-derecha{
+        @include caja-centrada;
+    }
+}
+
+footer{
+    @include footer-memo
+}
+
+@media screen and (max-width: 414px) {
+
+    header{
+        @include header-movil-flex
+    }
+
+    .main-mensajes{
+        flex-direction: column;
+        height: auto;
+
+        
+        .menu{
+            width: 100%;
+            &-nav-mensajes{
+                display: flex;
+                height: auto;
+                width: 100% ;
+                margin: 0;
+                margin-top: 10px;
+                justify-content: space-between;
+    
+                .menu-txt{
+                    display: none;
+                }
+                
+            }
+            
+        }
+
+        .section-mensajes{
+            overflow: auto;
+        }
+        
+        .caja-derecha{
+            .p-mensajes{
+                flex-direction: column;
+                .mail{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+}

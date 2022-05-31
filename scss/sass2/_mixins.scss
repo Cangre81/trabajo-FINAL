@@ -1,0 +1,171 @@
+@import "../variables/variables";
+
+@mixin header-all ($user-header-r, $boton-header-r:0){
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: $ColorBack;
+    background-size: cover;
+
+    .header-user{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    .fa-folder-open{
+        color: $ColorMemo;
+        font-size:large;
+        margin-left: 50px;
+    }
+    .h4-header{
+        font-family: $LetraMemo;
+        font-size: large;
+    }
+    .usuario-header{
+        position: relative;
+        left: $user-header-r;
+        
+    }
+    .boton-salir{
+        position: relative;
+        left: $boton-header-r;
+       
+    }
+
+    
+}
+
+
+@mixin menu-all ($w-ancho , $h-alto) {
+    display: block;
+        width: $w-ancho;
+        height: $h-alto;
+        padding: 1px;   
+        background-color: $ColorBack;
+        text-align: left;
+        padding-left: 10px;
+        margin: 10px;
+        text-decoration: none;
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: $ColorMemo
+        }
+        
+            list-style:none;
+            text-decoration: none;
+    
+        .ul-inicio li{
+            margin-top: 10px;
+            
+        }
+    
+}
+
+@mixin footer-memo($background-footer : $ColorBack) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: $background-footer;
+
+        .fa-instagram{
+            margin-right: 10px;
+            color: black;
+            font-size: x-large;
+            position: relative;
+        }
+        
+        .fa-envelope{
+            color: black;
+            font-size: x-large;
+            position: relative;
+        }
+}
+
+@mixin caja-centrada {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+@mixin header-movil{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: $ColorBack;
+    background-size: cover;
+
+    .header-user{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    .fa-folder-open{
+        color: $ColorMemo;
+        font-size:large;
+        margin-left: 50px;
+    }
+    .h4-header{
+        font-family: $LetraMemo;
+        font-size: large;
+    }
+    .usuario-header{
+        font-size: x-small;
+        position: relative;
+        left: 84%;
+        
+    }
+    .boton-salir{
+        position: relative;
+        left: 22%;
+       
+    }
+
+    
+}
+
+@mixin header-movil-flex{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: $ColorBack;
+    background-size: cover;
+
+    .header-user{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    .fa-folder-open{
+        color: $ColorMemo;
+        font-size:large;
+        margin-left: 50px;
+    }
+    .h4-header{
+        font-family: $LetraMemo;
+        font-size: large;
+    }
+    .usuario-header{
+        font-size: x-small;
+        position: relative;
+        left: 58%;
+        
+    }
+    .boton-salir{
+        position: relative;
+        left: 18%;
+       
+    }
+
+    
+}

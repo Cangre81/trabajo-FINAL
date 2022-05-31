@@ -1,0 +1,102 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/maps";
+@import "../sass2/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Allerta&family=Amatic+SC&family=Gloria+Hallelujah&family=K2D:ital,wght@1,600&family=Orbitron:wght@600&family=Palette+Mosaic&display=swap');
+
+
+.main-index{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+
+
+    .marca-index{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        animation: fadeInDown 1500ms ease-in-out;
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fa-folder-open{
+            font-size: 60px;
+            color: $ColorMemo;
+        }
+        .h1-index{
+            margin-top: 10px;
+            font-family: $LetraMemo; 
+            color: $ColorMemo
+        }
+        .h2-index{
+            font-family: $LetraMemo; color: gray;
+        }
+        
+        .texto-login{
+            font-size: small;
+            margin-bottom: 5px;
+        }
+        .fa-circle{
+            font-size: small;
+            padding: 10px;
+            text-align: center;
+        }
+    
+    }
+
+    .caja-login{
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #eaeeec;
+
+        .section-login{
+            padding-right: 30px;
+        }
+        .input-login{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .boton-entrar{
+            margin-top: 5px;
+            background-color:$ColorMemo;
+            color: white;
+            padding: 5px;
+            border: none;
+            
+        }
+        .boton-crear-cuenta{
+            margin-top: 25px;
+        }
+    }
+}
+
+.footer-index{
+    @include footer-memo (none);
+}
+
+
+@media screen and (max-width: 414px) {
+    .main-index{
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+    
+}

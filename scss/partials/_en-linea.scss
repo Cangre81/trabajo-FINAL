@@ -1,0 +1,130 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/maps";
+@import "../sass2/mixins";
+
+header{
+    @include header-all (0,0)
+}
+
+.main-enlinea{
+    display: flex;
+    align-items: center;
+
+    
+
+    .menu-nav-enlinea{
+        @include menu-all (150px, 590px)
+    }
+
+    .section-enlinea{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+
+        .clases-enlinea{
+            background-color: $ColorBack;
+            width: 200px;
+            height: 170px;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .clases-enlinea-ausencia{
+            background-color: $ColorBack;
+            width: 200px;
+            height: 170px;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .clases-enlinea-ausencia:hover{
+                height: 200px;
+                color: gray
+            }
+        }
+        .boton-ir{
+            margin-top: 10px;
+            background-color:#69d0a3;
+            color: white;
+            padding: 5px 15px;
+            border: none;
+            &:hover{
+                background-color: black
+            }
+            
+        }
+        
+        .clases-enlinea .fa-video{
+            font-size: x-large; 
+        }
+        
+        .clases-enlinea .fa-cloud{
+            font-size: x-large; 
+        }
+        
+        .clases-enlinea-ausencia .fa-folder{
+            font-size: x-large; 
+        }
+        
+        .clases-enlinea .fa-folder-plus{
+            font-size: x-large; 
+        }
+    
+    }
+    .caja-derecha{
+        @include caja-centrada;
+    }
+
+}
+
+@media screen and (max-width: 414px){
+    header{
+        @include header-movil-flex
+    }
+
+    .main-enlinea{
+        flex-direction: column;
+        height: auto;
+
+        
+        .menu{
+            width: 100%;
+            &-nav-enlinea{
+                display: flex;
+                height: auto;
+                width: 100% ;
+                margin: 0;
+                margin-top: 10px;
+                justify-content: space-between;
+    
+                .menu-txt{
+                    display: none;
+                }
+                
+            }
+            
+        }
+        .caja-derecha{
+            .section-enlinea{
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                .clases-enlinea{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+}
+
