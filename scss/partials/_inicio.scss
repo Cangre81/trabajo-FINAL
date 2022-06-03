@@ -25,7 +25,7 @@
     .inicio-footer { grid-area: footer; }
 
     .inicio-header{
-        @include header-all (550px, 300px)
+        @include header-all (1000px, 500px)
     }
 
     .menu-nav{

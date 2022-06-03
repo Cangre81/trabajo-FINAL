@@ -119,10 +119,10 @@
       font-size: large; }
     .inicio-container .inicio-header .usuario-header {
       position: relative;
-      left: 550px; }
+      left: 1000px; }
     .inicio-container .inicio-header .boton-salir {
       position: relative;
-      left: 300px; }
+      left: 500px; }
   .inicio-container .menu-nav {
     display: block;
     width: 150px;
@@ -672,10 +672,10 @@ header {
     font-size: large; }
   header .usuario-header {
     position: relative;
-    left: 550px; }
+    left: 950px; }
   header .boton-salir {
     position: relative;
-    left: 300px; }
+    left: 500px; }
 
 .main-ayuda {
   display: flex;
