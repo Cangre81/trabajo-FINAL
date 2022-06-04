@@ -501,15 +501,15 @@ footer {
         .main-mensajes .menu-nav-mensajes .menu-txt {
           display: none; }
     .main-mensajes .section-mensajes {
-      overflow: auto; }
+      overflow: auto;
+      height: 500px; }
     .main-mensajes .caja-derecha .p-mensajes {
       flex-direction: column; }
       .main-mensajes .caja-derecha .p-mensajes .mail {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 550px; } }
+        justify-content: center; } }
 
 header {
   display: flex;
