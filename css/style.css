@@ -126,7 +126,7 @@
   .inicio-container .menu-nav {
     display: block;
     width: 150px;
-    height: 670px;
+    height: 900px;
     padding: 1px;
     background-color: #eaeeec;
     text-align: left;
@@ -171,7 +171,7 @@
     opacity: 0; } }
       .inicio-container .inicio-body .section-inicio .inicio-derecha .mis-docentes {
         background-color: #eaeeec;
-        height: 320px;
+        height: 545px;
         font-size: small; }
   .inicio-container .inicio-footer {
     display: flex;
