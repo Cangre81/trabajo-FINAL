@@ -233,11 +233,12 @@
         width: 100%; }
       .inicio-container .inicio-body .section-inicio .inicio-derecha {
         width: 100%;
-        height: 350px;
         margin-left: 0; }
         .inicio-container .inicio-body .section-inicio .inicio-derecha .notificaciones {
           height: auto;
-          padding: 10px; } }
+          padding: 10px; }
+        .inicio-container .inicio-body .section-inicio .inicio-derecha .mis-docentes {
+          height: auto; } }
 
 header {
   display: flex;
